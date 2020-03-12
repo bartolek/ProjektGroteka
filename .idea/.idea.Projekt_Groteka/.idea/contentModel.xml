@@ -15,6 +15,7 @@
         <e p="App.config" t="Include" />
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
+        <e p="BazaGier.db" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DeleteWindow.xaml" t="Include" />
         <e p="DeleteWindow.xaml.cs" t="Include" />
