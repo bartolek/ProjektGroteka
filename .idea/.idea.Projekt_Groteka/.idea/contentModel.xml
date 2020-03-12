@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\eNes\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\eNes\.Rider2019.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\eNes\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\eNes\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Projekt_Groteka.109442483.00" t="ExcludeRecursive" />
+    <e p="S:\Projekty\Projekt_Groteka" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Projekt_Groteka" t="IncludeRecursive">
+        <e p="addcm.xaml" t="Include" />
+        <e p="addcm.xaml.cs" t="Include" />
+        <e p="AddWindow.xaml" t="Include" />
+        <e p="AddWindow.xaml.cs" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DeleteWindow.xaml" t="Include" />
+        <e p="DeleteWindow.xaml.cs" t="Include" />
+        <e p="EditWindow.xaml" t="Include" />
+        <e p="EditWindow.xaml.cs" t="Include" />
+        <e p="GameInfo.xaml" t="Include" />
+        <e p="GameInfo.xaml.cs" t="Include" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="addcm.g.cs" t="Include" />
+            <e p="AddWindow.g.cs" t="Include" />
+            <e p="App.g.cs" t="Include" />
+            <e p="DeleteWindow.g.cs" t="Include" />
+            <e p="EditWindow.g.cs" t="Include" />
+            <e p="GameInfo.g.cs" t="Include" />
+            <e p="MainWindow.g.cs" t="Include" />
+          </e>
+        </e>
+        <e p="packages.config" t="Include" />
+        <e p="Projekt_Groteka.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+      </e>
+      <e p="Projekt_Groteka.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
