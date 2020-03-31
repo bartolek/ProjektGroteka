@@ -16,7 +16,7 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
-        <Image Name="Iscreen1" Source="C:\Users\eNes\Downloads\doom\1.jpeg" Margin="5,20,5,0" MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Left"></Image>
+        <Image Name="Iscreen1" Margin="5,20,5,0" MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Left"></Image>
         <Image Name = "Iscreen2" Source="C:\Users\eNes\Downloads\doom\2.jpg" Margin="5,20,5,0"  MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
         <Image Name = "Iscreen3" Source="C:\Users\eNes\Downloads\doom\3.jpg" Margin="5,20,5,0"  MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Right"></Image>
         <TextBlock Margin="0,30,0,0" Name ="TOpis" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="600">Doom – seria strzelanek pierwszoosobowych stworzona przez id Software. Każda część koncentruje się na bezimiennym marine działającym z ramienia Union Aerospace Corporation (UAC) i walczącym z hordami demonów i nieumarłych[1].

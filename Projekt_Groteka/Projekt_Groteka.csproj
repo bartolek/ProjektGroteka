@@ -58,7 +58,6 @@
         </ApplicationDefinition>
         <Page Include="addcm.xaml" />
         <Page Include="AddWindow.xaml" />
-        <Page Include="DeleteWindow.xaml" />
         <Page Include="EditWindow.xaml" />
         <Page Include="GameInfo.xaml" />
         <Page Include="MainWindow.xaml">
@@ -74,9 +73,6 @@
         <Compile Include="App.xaml.cs">
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
-        </Compile>
-        <Compile Include="DeleteWindow.xaml.cs">
-          <DependentUpon>DeleteWindow.xaml</DependentUpon>
         </Compile>
         <Compile Include="EditWindow.xaml.cs">
           <DependentUpon>EditWindow.xaml</DependentUpon>

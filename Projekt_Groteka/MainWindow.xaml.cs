@@ -103,8 +103,9 @@ namespace Projekt_Groteka
 
         void new_click(object sender, RoutedEventArgs e)
         {
-            Window dodaj = new AddWindow();
+            Window dodaj = new AddWindow(ref_click);
             dodaj.Show();
+            ref_click(null,null);
         }
 
         void ref_click(object sender, RoutedEventArgs e)
@@ -115,7 +116,7 @@ namespace Projekt_Groteka
 
         void exit_click(object sender, RoutedEventArgs e)
         {
-            //todo
+            System.Windows.Forms.Application.Exit();
         }
 
         void item_menu_list(object sender, RoutedEventArgs e)
@@ -139,10 +140,5 @@ namespace Projekt_Groteka
             Application.Current.Shutdown();
         }
 
-        private void del(object sender, RoutedEventArgs e)
-        {
-            DeleteWindow del = new DeleteWindow();
-            del.Show();
-        }
     }
 }

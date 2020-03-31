@@ -12,7 +12,6 @@
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_Menu">
                     <MenuItem Header="_Dodaj" Click="new_click" />
-                    <MenuItem Header="_Usuń" Click="del" />
                     <MenuItem Header="_Odśwież" Click="ref_click"/>
                     <Separator />
                     <MenuItem Header="_Wyjdź"  Click = "exit_click"/>

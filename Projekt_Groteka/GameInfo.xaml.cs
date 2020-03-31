@@ -19,7 +19,7 @@ namespace Projekt_Groteka
             
             InitializeComponent();
             init(id);
-            Cid = id = (int.Parse(id) + 1).ToString();
+            Cid = (int.Parse(id) + 1).ToString();
         }
 
         public void init(string id)
@@ -32,86 +32,41 @@ namespace Projekt_Groteka
          SQLiteDataReader dr = sql_cmd.ExecuteReader();
             string turniej="";
             string opis="";
-            Image Screen1, Screen2, Screen3;
+            string err = "https://www.ricoh.pl/media/error_93-12813.jpeg";
             while (dr.Read())
             {
                 if (dr[2].ToString() != "")
                 {
-                    Screen1 = new Image
-                    {
-                        Source = new BitmapImage(new Uri(dr[2].ToString())),
-                        Stretch = Stretch.Fill,
-                        Width = 200,
-                        Height = 200
-
-                    };
+                    Iscreen1.Source = new BitmapImage(new Uri(dr[2].ToString()));
                 }
                 else
                 {
-                    Screen1 = new Image
-                    {
-                        Source = new BitmapImage(new Uri("https://www.ricoh.pl/media/error_93-12813.jpeg")),
-                        Stretch = Stretch.Fill,
-                        Width = 200,
-                        Height = 200
-
-                    };
+                    Iscreen1.Source = new BitmapImage(new Uri(err));
                     
                 }
 
                 if (dr[3].ToString() != "")
                 {
-                    Screen2 = new Image
-                    {
-                        Source = new BitmapImage(new Uri(dr[3].ToString())),
-                        Stretch = Stretch.Fill,
-                        Width = 200,
-                        Height = 200
-
-                    };
+                    Iscreen2.Source = new BitmapImage(new Uri(dr[3].ToString()));
                 }
                 else
                 {
-                    Screen2 = new Image
-                    {
-                        Source = new BitmapImage(new Uri("https://www.ricoh.pl/media/error_93-12813.jpeg")),
-                        Stretch = Stretch.Fill,
-                        Width = 200,
-                        Height = 200
-
-                    };
+                    Iscreen2.Source = new BitmapImage(new Uri(err));
                     
                 }                
                 if (dr[4].ToString() != "")
                 {
-                    Screen3 = new Image
-                    {
-                        Source = new BitmapImage(new Uri(dr[4].ToString())),
-                        Stretch = Stretch.Fill,
-                        Width = 200,
-                        Height = 200
-
-                    };
+                    Iscreen3.Source = new BitmapImage(new Uri(dr[4].ToString()));
                 }
                 else
-                {
-                    Screen3 = new Image
-                    {
-                        Source = new BitmapImage(new Uri("https://www.ricoh.pl/media/error_93-12813.jpeg")),
-                        Stretch = Stretch.Fill,
-                        Width = 200,
-                        Height = 200
+                {    
+                    Iscreen3.Source = new BitmapImage(new Uri(err));
 
-                    };
-                    
                 }
                  opis = dr[5].ToString();
                  turniej = dr[6].ToString();
                  TTurniej.Text = turniej;
                  TOpis.Text = opis;
-                 Iscreen1 = Screen1;
-                 Iscreen2 = Screen2;
-                 Iscreen3 = Screen3;
             }
 
             init_kom(id);
@@ -135,14 +90,15 @@ namespace Projekt_Groteka
 
         public void addcm(object sender, RoutedEventArgs routedEventArgs)
         {
-            Window addkom = new addcm(Cid);
+            Window addkom = new addcm(Cid,this);
             addkom.Show();
         }
 
         private void edit(object sender, RoutedEventArgs e)
         {
-            Window edit = new EditWindow(Cid);
+            Window edit = new EditWindow(Cid,this);
             edit.Show();
+            
         }
 
         private void cls(object sender, RoutedEventArgs e)
