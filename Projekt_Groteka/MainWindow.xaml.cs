@@ -68,13 +68,26 @@ namespace Projekt_Groteka
                     path = dr[0].ToString();
                     if (path != "")
                     {
-                        myList.Add(new Image
+                        try
                         {
-                            Source = new BitmapImage(new Uri(path)),
-                            Stretch = Stretch.Fill,
-                            Width = 200,
-                            Height = 200
-                        });
+                            myList.Add(new Image
+                            {
+                                Source = new BitmapImage(new Uri(path)),
+                                Stretch = Stretch.Fill,
+                                Width = 200,
+                                Height = 200
+                            });
+                        }
+                        catch
+                        {
+                            myList.Add(new Image
+                            {
+                                Source = new BitmapImage(new Uri("https://www.ricoh.pl/media/error_93-12813.jpeg")),
+                                Stretch = Stretch.Fill,
+                                Width = 200,
+                                Height = 200
+                            });
+                        }
                     }
                     else
                     {

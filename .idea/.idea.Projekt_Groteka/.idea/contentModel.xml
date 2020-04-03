@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\eNes\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\eNes\.Rider2019.3\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\eNes\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\eNes\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Projekt_Groteka.109442483.00" t="ExcludeRecursive" />
-    <e p="S:\Projekty\Projekt_Groteka" t="IncludeFlat">
+    <e p="C:\Users\X250\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\X250\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Projekt_Groteka.110499100.00" t="ExcludeRecursive" />
+    <e p="C:\Users\X250\RiderProjects\Projekt_Groteka" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Projekt_Groteka" t="IncludeRecursive">
         <e p="addcm.xaml" t="Include" />
