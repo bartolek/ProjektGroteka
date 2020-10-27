@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\tomas\Source\Repos\Projekt_Groteka\Projekt_Groteka\obj\Debug\
+C:\Users\tomas\Source\Repos\Projekt_Groteka\Projekt_Groteka\obj\Release\
 Projekt_Groteka
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\tomas\Source\Repos\Projekt_Groteka\Projekt_Groteka\App.xaml
 5-1132600919
 1-2118060340
-9-1560382001
+8174803123
 12122586317
 addcm.xaml;AddWindow.xaml;EditWindow.xaml;GameInfo.xaml;MainWindow.xaml;
 

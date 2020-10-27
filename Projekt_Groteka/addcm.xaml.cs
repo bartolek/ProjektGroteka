@@ -27,4 +27,5 @@ namespace Projekt_Groteka
             this.Close();
         }
     }
+//dupa
 }
