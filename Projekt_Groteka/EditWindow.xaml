@@ -7,18 +7,21 @@
         mc:Ignorable="d"
         Title="EditWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
+        
         <TextBlock Margin="20,20,20,20">Link ścieżka do 1 screena</TextBlock>
         <TextBox Name="scren1" Width="250" Height="20" Margin="20,40,20,20" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
         <TextBlock Margin="20,80,20,20">Link ścieżka do 2 screena</TextBlock>
         <TextBox Name="scren2" Width="250" Height="20" Margin="20,100,20,20" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
         <TextBlock Margin="20,140,20,20">Link ścieżka do 3 screena</TextBlock>
         <TextBox Name="scren3" Width="250" Height="20" Margin="20,160,20,20" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-        <TextBlock Margin="0,20,20,20" VerticalAlignment="Top" HorizontalAlignment="center" >Opis</TextBlock>
+        <TextBlock Margin="0,20,20,20" HorizontalAlignment="center">Nazwa Gry</TextBlock>
+        <TextBox Name="nazwa" Width="250" Height="20" Margin="190,40,20,20" VerticalAlignment="Top" HorizontalAlignment="Center"></TextBox>
+        <TextBlock Margin="0,90,20,20" VerticalAlignment="Top" HorizontalAlignment="center" >Opis</TextBlock>
         <TextBlock Margin="20,190,20,20">Link ścieżka do okladki</TextBlock>
         <TextBox Name="okladka" Width="250" Height="20" Margin="20,220,20,20" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-        <TextBox Name="Opis" Width="300" Height="200" Margin="270,60,20,20" VerticalAlignment="Top" HorizontalAlignment="center" ></TextBox>
+        <TextBox Name="Opis" Width="300" Height="200" Margin="240,120,20,20" VerticalAlignment="Top" HorizontalAlignment="center" TextWrapping="Wrap"></TextBox>
         <TextBlock Margin="20,260,20,20" VerticalAlignment="Top" HorizontalAlignment="Left" >Najbliższy Turniej</TextBlock>
-        <DatePicker Name="Turniej" Width="200" Height="30" Margin="20,0,20,120" VerticalAlignment="bottom" HorizontalAlignment="Left"></DatePicker>
-        <Button Name="Edit" Width="60" Height="30" Margin="270,60,20,90" VerticalAlignment="bottom" HorizontalAlignment="center" Click="zapisz">Zapisz</Button>
+        <DatePicker Name="Turniej" Width="200" Height="30" Margin="20,0,20,100" VerticalAlignment="bottom" HorizontalAlignment="Left"></DatePicker>
+        <Button Name="Edit" Width="60" Height="30" Margin="270,60,30,60" VerticalAlignment="bottom" HorizontalAlignment="center" Click="zapisz">Zapisz</Button>
     </Grid>
 </Window>

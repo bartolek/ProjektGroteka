@@ -26,6 +26,7 @@ namespace Projekt_Groteka
             InitializeComponent();
             Init_list();
             Init_galery();
+            this.Title = "Groteka";
         }
 
         public void Init_list()
@@ -60,6 +61,7 @@ namespace Projekt_Groteka
                 sql_con.Open();
                 SQLiteCommand sql_cmd = sql_con.CreateCommand();
                 sql_cmd.CommandText = "SELECT obraz FROM GRY";
+                
 
                 SQLiteDataReader dr = sql_cmd.ExecuteReader();
                 string path;
@@ -116,12 +118,12 @@ namespace Projekt_Groteka
 
         void new_click(object sender, RoutedEventArgs e)
         {
-            Window dodaj = new AddWindow(ref_click);
+            Window dodaj = new AddWindow(this);
             dodaj.Show();
             ref_click(null,null);
         }
 
-        void ref_click(object sender, RoutedEventArgs e)
+        public void ref_click(object sender, RoutedEventArgs e)
         {
             Init_list();
             Init_galery();
@@ -129,7 +131,9 @@ namespace Projekt_Groteka
 
         void exit_click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            base.OnClosed(e);
+
+            Application.Current.Shutdown();
         }
 
         void item_menu_list(object sender, RoutedEventArgs e)

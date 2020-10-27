@@ -4,13 +4,14 @@ using System.Windows;
 
 namespace Projekt_Groteka
 {
+   
     public partial class AddWindow : Window
-    {
-        private Action<object, RoutedEventArgs> rload;
-        public AddWindow(Action<object, RoutedEventArgs> reload)
+    { 
+        MainWindow Main;
+        public AddWindow(MainWindow mw)
         {
             InitializeComponent();
-            rload = reload;
+            Main = mw;
         }
 
         void Dodaj_OnClick(object sender, RoutedEventArgs e)
@@ -23,7 +24,9 @@ namespace Projekt_Groteka
             sql_cmd.CommandText = "insert into Gry(id,Nazwa,obraz) values(null,'" + NazwaGry.Text + "','" +
                                   ObrazekGry.Text + "');";
             sql_cmd.ExecuteNonQuery();
-            rload(null, null);
+            sql_cmd.CommandText = "insert into GameInfo(id,GameID,Screen1,Screen2,Screen3,Opis,Turniej) values(null,(select id from Gry where Nazwa = '"+gra+"'),null,null,null,null,null);";
+            sql_cmd.ExecuteNonQuery();
+            Main.ref_click(null,null);
             this.Close();
         }
     }

@@ -40,6 +40,7 @@ namespace Projekt_Groteka
             DB.Fill(DS);
             sql_con.Close();
             okladka.Text = DS.Tables[0].Rows[0]["obraz"].ToString();
+            nazwa.Text = DS.Tables[0].Rows[0]["Nazwa"].ToString();
         }
 
         private void zapisz(object sender, RoutedEventArgs routedEventArgs)
@@ -52,8 +53,11 @@ namespace Projekt_Groteka
             sql_cmd.ExecuteNonQuery();
             sql_cmd.CommandText = "Update Gry set obraz = '"+okladka.Text+"' where id='"+id+"';";
             sql_cmd.ExecuteNonQuery();
+            sql_cmd.CommandText = "Update Gry set Nazwa = '"+nazwa.Text+"' where id='"+id+"';";
+            sql_cmd.ExecuteNonQuery();
             sql_con.Close();
             gameInfo.init((int.Parse(id)-1).ToString());
+            this.Close();
         }
     }
 }
