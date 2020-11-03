@@ -23,5 +23,6 @@
         <TextBlock Margin="20,260,20,20" VerticalAlignment="Top" HorizontalAlignment="Left" >Najbliższy Turniej</TextBlock>
         <DatePicker Name="Turniej" Width="200" Height="30" Margin="20,0,20,100" VerticalAlignment="bottom" HorizontalAlignment="Left"></DatePicker>
         <Button Name="Edit" Width="60" Height="30" Margin="270,60,30,60" VerticalAlignment="bottom" HorizontalAlignment="center" Click="zapisz">Zapisz</Button>
+        
     </Grid>
 </Window>
