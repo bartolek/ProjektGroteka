@@ -23,17 +23,7 @@
         <e p="GameInfo.xaml.cs" t="Include" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="addcm.g.cs" t="Include" />
-            <e p="AddWindow.g.cs" t="Include" />
-            <e p="App.g.cs" t="Include" />
-            <e p="EditWindow.g.cs" t="Include" />
-            <e p="GameInfo.g.cs" t="Include" />
-            <e p="MainWindow.g.cs" t="Include" />
-            <e p="Projekt_Groteka_Content.g.cs" t="Include" />
-          </e>
-        </e>
+        <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
         <e p="Projekt_Groteka.csproj" t="IncludeRecursive" />
         <e p="Properties" t="Include">
