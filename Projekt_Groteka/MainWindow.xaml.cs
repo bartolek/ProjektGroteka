@@ -55,24 +55,23 @@ namespace Projekt_Groteka
             try
             {
                 Galery.Items.Clear();
-                List<Image> myList = new List<Image>();
+                List<Image> GaleryList = new List<Image>();
 
                 SQLiteConnection sql_con = new SQLiteConnection("DataSource=BazaGier.db;Read Only=false");
                 sql_con.Open();
                 SQLiteCommand sql_cmd = sql_con.CreateCommand();
                 sql_cmd.CommandText = "SELECT obraz FROM GRY";
                 
-
-                SQLiteDataReader dr = sql_cmd.ExecuteReader();
+                SQLiteDataReader DR = sql_cmd.ExecuteReader();
                 string path;
-                while (dr.Read())
+                while (DR.Read())
                 {
-                    path = dr[0].ToString();
+                    path = DR[0].ToString();
                     if (path != "")
                     {
                         try
                         {
-                            myList.Add(new Image
+                            GaleryList.Add(new Image
                             {
                                 Source = new BitmapImage(new Uri(path)),
                                 Stretch = Stretch.Fill,
@@ -82,7 +81,7 @@ namespace Projekt_Groteka
                         }
                         catch
                         {
-                            myList.Add(new Image
+                            GaleryList.Add(new Image
                             {
                                 Source = new BitmapImage(new Uri("https://www.ricoh.pl/media/error_93-12813.jpeg")),
                                 Stretch = Stretch.Fill,
@@ -93,7 +92,7 @@ namespace Projekt_Groteka
                     }
                     else
                     {
-                        myList.Add(new Image
+                        GaleryList.Add(new Image
                         {
                             Source = new BitmapImage(new Uri("https://www.ricoh.pl/media/error_93-12813.jpeg")),
                             Stretch = Stretch.Fill,
@@ -103,7 +102,7 @@ namespace Projekt_Groteka
                     }
                 }
 
-                foreach (var img in myList)
+                foreach (var img in GaleryList)
                 {
                     Galery.Items.Add(img);
                 }
@@ -118,8 +117,8 @@ namespace Projekt_Groteka
 
         void new_click(object sender, RoutedEventArgs e)
         {
-            Window dodaj = new AddWindow(this);
-            dodaj.Show();
+            Window addWindow = new AddWindow(this);
+            addWindow.Show();
             ref_click(null,null);
         }
 

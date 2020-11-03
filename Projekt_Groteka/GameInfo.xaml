@@ -10,20 +10,20 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_Menu">
-                    <MenuItem Header="_Edytuj"  Click="edit"/>
+                    <MenuItem Header="_Edytuj"  Click="edit_click"/>
                     <Separator />
-                    <MenuItem Header="_Wyjdź" Click="cls" />
+                    <MenuItem Header="_Wyjdź" Click="exit_click" />
                 </MenuItem>
             </Menu>
         </DockPanel>
-        <Image Name="Iscreen1" Margin="5,20,5,0" MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Left"></Image>
-        <Image Name = "Iscreen2"  Margin="5,20,5,0"  MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
-        <Image Name = "Iscreen3"  Margin="5,20,5,0"  MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Right"></Image>
-        <TextBlock Margin="0,30,0,0" Name ="TOpis" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="600">
+        <Image Name="LeftScreen" Margin="5,20,5,0" MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Left"></Image>
+        <Image Name = "CenterScreen"  Margin="5,20,5,0"  MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+        <Image Name = "RightScreen"  Margin="5,20,5,0"  MaxWidth="260" MaxHeight="200" VerticalAlignment="Top" HorizontalAlignment="Right"></Image>
+        <TextBlock Margin="0,30,0,0" Name ="GameDesc" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="600">
             [TEMPLATE]
         </TextBlock>
         <TextBlock Margin="10,0,0,30" VerticalAlignment="Bottom" HorizontalAlignment="Left">Najbliższy turnej</TextBlock>
-        <TextBlock Margin="10,0,0,10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name ="TTurniej">2015-07-13</TextBlock>
+        <TextBlock Margin="10,0,0,10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name ="TournamentDate">2015-07-13</TextBlock>
         <ListView ItemsSource="{Binding}" Name="Comments" Margin="0,0,0,10" Width="500" Height="100" VerticalAlignment="Bottom">
             <ListView.View>
             <GridView>
@@ -32,6 +32,6 @@
             </GridView>
             </ListView.View>
         </ListView>
-        <Button Click="addcm" Margin="10,0,20,10" Height="20" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="right">Dodaj Komentarz</Button>
+        <Button Click="addcm_click" Margin="10,0,20,10" Height="20" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="right">Dodaj Komentarz</Button>
     </Grid>
 </Window>

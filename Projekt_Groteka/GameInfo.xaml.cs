@@ -13,13 +13,13 @@ namespace Projekt_Groteka
 {
     public partial class GameInfo : Window
     {
-        public string Cid;
+        public string DB_ID;
         public GameInfo(string id)
         {
             
             InitializeComponent();
             init(id);
-            Cid = (int.Parse(id) + 1).ToString();
+            DB_ID = (int.Parse(id) + 1).ToString();
         }
 
         public void init(string id)
@@ -29,44 +29,40 @@ namespace Projekt_Groteka
             sql_con.Open();
             SQLiteCommand sql_cmd = sql_con.CreateCommand();
             sql_cmd.CommandText = "SELECT * FROM GameInfo where GameID = " + id;
-         SQLiteDataReader dr = sql_cmd.ExecuteReader();
-            string turniej="";
-            string opis="";
-            string err = "https://www.ricoh.pl/media/error_93-12813.jpeg";
-            while (dr.Read())
+         SQLiteDataReader DR = sql_cmd.ExecuteReader();
+         string err = "https://www.ricoh.pl/media/error_93-12813.jpeg";
+            while (DR.Read())
             {
-                if (dr[2].ToString() != "")
+                if (DR[2].ToString() != "")
                 {
-                    Iscreen1.Source = new BitmapImage(new Uri(dr[2].ToString()));
+                    LeftScreen.Source = new BitmapImage(new Uri(DR[2].ToString()));
                 }
                 else
                 {
-                    Iscreen1.Source = new BitmapImage(new Uri(err));
+                    LeftScreen.Source = new BitmapImage(new Uri(err));
                     
                 }
 
-                if (dr[3].ToString() != "")
+                if (DR[3].ToString() != "")
                 {
-                    Iscreen2.Source = new BitmapImage(new Uri(dr[3].ToString()));
+                    CenterScreen.Source = new BitmapImage(new Uri(DR[3].ToString()));
                 }
                 else
                 {
-                    Iscreen2.Source = new BitmapImage(new Uri(err));
+                    CenterScreen.Source = new BitmapImage(new Uri(err));
                     
                 }                
-                if (dr[4].ToString() != "")
+                if (DR[4].ToString() != "")
                 {
-                    Iscreen3.Source = new BitmapImage(new Uri(dr[4].ToString()));
+                    RightScreen.Source = new BitmapImage(new Uri(DR[4].ToString()));
                 }
                 else
                 {    
-                    Iscreen3.Source = new BitmapImage(new Uri(err));
+                    RightScreen.Source = new BitmapImage(new Uri(err));
 
                 }
-                 opis = dr[5].ToString();
-                 turniej = dr[6].ToString();
-                 TTurniej.Text = turniej;
-                 TOpis.Text = opis;
+                TournamentDate.Text = DR[6].ToString();
+                GameDesc.Text = DR[5].ToString();
             }
 
             init_kom(id);
@@ -80,7 +76,7 @@ namespace Projekt_Groteka
             sql_con.Open();
             SQLiteCommand sql_cmd = sql_con.CreateCommand();
             sql_cmd.CommandText = "SELECT * FROM komentarze where id_gry = " + id;
-            SQLiteDataReader dr = sql_cmd.ExecuteReader();
+            SQLiteDataReader DR = sql_cmd.ExecuteReader();
             SQLiteDataAdapter DB = new SQLiteDataAdapter(sql_cmd.CommandText, sql_con);
             DataSet DS = new DataSet();
             DB.Fill(DS);
@@ -88,20 +84,20 @@ namespace Projekt_Groteka
             sql_con.Close();
         }
 
-        public void addcm(object sender, RoutedEventArgs routedEventArgs)
+        public void addcm_click(object sender, RoutedEventArgs routedEventArgs)
         {
-            Window addkom = new addcm(Cid,this);
+            Window addkom = new addcm(DB_ID,this);
             addkom.Show();
         }
 
-        private void edit(object sender, RoutedEventArgs e)
+        private void edit_click(object sender, RoutedEventArgs e)
         {
-            Window edit = new EditWindow(Cid,this);
+            Window edit = new EditWindow(DB_ID,this);
             edit.Show();
             
         }
 
-        private void cls(object sender, RoutedEventArgs e)
+        private void exit_click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
