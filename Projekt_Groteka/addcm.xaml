@@ -8,9 +8,9 @@
         Title="addcm" Height="200" Width="300" ResizeMode="NoResize">
     <Grid>
         <TextBlock HorizontalAlignment="Center">Komentarz</TextBlock>
-        <TextBox Name="Komentarz" Margin="0,20,0,0" HorizontalAlignment="center" VerticalAlignment="Top" Width="200" Height="30" ></TextBox>
+        <TextBox Name="Comment" Margin="0,20,0,0" HorizontalAlignment="center" VerticalAlignment="Top" Width="200" Height="30" ></TextBox>
         <TextBlock Margin="0,0,0,40" HorizontalAlignment="Center" VerticalAlignment="Center">Ocena</TextBlock>
-        <TextBox Name="Ocena" Margin="0,15,0,0" HorizontalAlignment="center" VerticalAlignment="center" Width="200" Height="30"></TextBox>
-        <Button Name="Dodaj" Margin="0,0,0,10" VerticalAlignment="Bottom"  HorizontalAlignment="center" Width="100" Height="20" Click="zapisz">Dodaj</Button>
+        <TextBox Name="Rating" Margin="0,15,0,0" HorizontalAlignment="center" VerticalAlignment="center" Width="200" Height="30"></TextBox>
+        <Button Name="Add" Margin="0,0,0,10" VerticalAlignment="Bottom"  HorizontalAlignment="center" Width="100" Height="20" Click="add_click">Dodaj</Button>
     </Grid>
 </Window>

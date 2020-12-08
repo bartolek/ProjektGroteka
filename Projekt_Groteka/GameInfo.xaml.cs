@@ -13,12 +13,21 @@ namespace Projekt_Groteka
 {
     public partial class GameInfo : Window
     {
-        public string DB_ID;
+        private string DB_ID;
+
+        public string get_DB_ID()
+        {
+            return DB_ID;
+        }
+        public void set_DB_ID(string value)
+        {
+            DB_ID = value;
+        }
         public GameInfo(string id)
         {
-            
             InitializeComponent();
             init(id);
+            //Obliczanie ID gry w Bazie danych
             DB_ID = (int.Parse(id) + 1).ToString();
         }
 
@@ -28,9 +37,9 @@ namespace Projekt_Groteka
             SQLiteConnection sql_con = new SQLiteConnection("DataSource=BazaGier.db;Read Only=false");
             sql_con.Open();
             SQLiteCommand sql_cmd = sql_con.CreateCommand();
-            sql_cmd.CommandText = "SELECT * FROM GameInfo where GameID = " + id;
-         SQLiteDataReader DR = sql_cmd.ExecuteReader();
-         string err = "https://www.ricoh.pl/media/error_93-12813.jpeg";
+            sql_cmd.CommandText = "SELECT * FROM GameInfo where GameID = " + id; 
+            SQLiteDataReader DR = sql_cmd.ExecuteReader(); 
+            string err = "https://www.ricoh.pl/media/error_93-12813.jpeg";
             while (DR.Read())
             {
                 if (DR[2].ToString() != "")
@@ -70,7 +79,7 @@ namespace Projekt_Groteka
 
         }
 
-        public void init_kom(string id)
+        private void init_kom(string id)
         {
             SQLiteConnection sql_con = new SQLiteConnection("DataSource=BazaGier.db;Read Only=false");
             sql_con.Open();
@@ -84,6 +93,8 @@ namespace Projekt_Groteka
             sql_con.Close();
         }
 
+        //Obsługa przycisków 
+        
         public void addcm_click(object sender, RoutedEventArgs routedEventArgs)
         {
             Window addkom = new addcm(DB_ID,this);

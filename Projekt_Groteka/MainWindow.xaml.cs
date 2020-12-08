@@ -29,10 +29,10 @@ namespace Projekt_Groteka
             this.Title = "Groteka";
         }
 
-        public void Init_list()
+        private void Init_list()
         {
             try
-            { 
+            {
                 Galery.Items.Clear();
                 SQLiteConnection sql_con = new SQLiteConnection("DataSource=BazaGier.db;Read Only=false");
                 sql_con.Open();
@@ -48,9 +48,10 @@ namespace Projekt_Groteka
             {
                 MessageBox.Show(e.Message);
             }
-            
+
         }
-        public void Init_galery()
+
+        private void Init_galery()
         {
             try
             {
@@ -114,7 +115,25 @@ namespace Projekt_Groteka
                 MessageBox.Show(e.Message);
             }
         }
+        
+        //Wyświetlanie informacji
+        
+        void item_menu_list(object sender, RoutedEventArgs e)
+        {
+            string id = MenuList.SelectedIndex.ToString();
+            GameInfo gameinfo = new GameInfo(id);
+            gameinfo.Show();
+        }
+        void item_menu_galery(object sender, RoutedEventArgs e)
+        {
+            string id = Galery.SelectedIndex.ToString();
+            GameInfo gameinfo = new GameInfo(id);
+            gameinfo.Show();
+        }
 
+        //Obsługa przycisków
+        
+        
         void new_click(object sender, RoutedEventArgs e)
         {
             Window addWindow = new AddWindow(this);
@@ -134,21 +153,8 @@ namespace Projekt_Groteka
 
             Application.Current.Shutdown();
         }
-
-        void item_menu_list(object sender, RoutedEventArgs e)
-        {
-
-            string id = MenuList.SelectedIndex.ToString();
-            GameInfo gameinfo = new GameInfo(id);
-            gameinfo.Show();
-        }
-        void item_menu_galery(object sender, RoutedEventArgs e)
-        {
-            string id = Galery.SelectedIndex.ToString();
-            GameInfo gameinfo = new GameInfo(id);
-            gameinfo.Show();
-        }
         
+        //Zamykanie okien
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);

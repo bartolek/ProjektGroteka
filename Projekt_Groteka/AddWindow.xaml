@@ -8,9 +8,9 @@
         Title="AddWindow" Height="200" Width="300" ResizeMode="NoResize">
     <Grid>
         <TextBlock HorizontalAlignment="Center">Nazwa Gry</TextBlock>
-        <TextBox Name="NazwaGry" Margin="0,20,0,0" HorizontalAlignment="center" VerticalAlignment="Top" Width="200" Height="30" ></TextBox>
+        <TextBox Name="Title" Margin="0,20,0,0" HorizontalAlignment="center" VerticalAlignment="Top" Width="200" Height="30" ></TextBox>
         <TextBlock Margin="0,0,0,40" HorizontalAlignment="Center" VerticalAlignment="Center">Link/ścieżka do okładki</TextBlock>
-        <TextBox Name="ObrazekGry" Margin="0,15,0,0" HorizontalAlignment="center" VerticalAlignment="center" Width="200" Height="30"></TextBox>
-        <Button Name="Dodaj" Margin="0,0,0,10" VerticalAlignment="Bottom"  HorizontalAlignment="center" Width="100" Height="20" Click="Dodaj_OnClick">Dodaj</Button>
+        <TextBox Name="GameCover" Margin="0,15,0,0" HorizontalAlignment="center" VerticalAlignment="center" Width="200" Height="30"></TextBox>
+        <Button Name="add" Margin="0,0,0,10" VerticalAlignment="Bottom"  HorizontalAlignment="center" Width="100" Height="20" Click="add_click">Dodaj</Button>
     </Grid>
 </Window>
