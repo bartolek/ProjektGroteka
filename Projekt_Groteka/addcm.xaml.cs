@@ -1,4 +1,4 @@
-using System.Data;
+﻿using System.Data;
 using System.Data.SQLite;
 using System.Windows;
 
@@ -29,5 +29,4 @@ namespace Projekt_Groteka
             this.Close();
         }
     }
-
 }

@@ -62,7 +62,7 @@ namespace Projekt_Groteka
                 sql_con.Open();
                 SQLiteCommand sql_cmd = sql_con.CreateCommand();
                 sql_cmd.CommandText = "SELECT obraz FROM GRY";
-                
+
                 SQLiteDataReader DR = sql_cmd.ExecuteReader();
                 string path;
                 while (DR.Read())
@@ -112,10 +112,18 @@ namespace Projekt_Groteka
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                handle_Exception(e);
             }
         }
         
+        public void handle_Exception(Exception e)
+        {
+            string message = "Message = " + e.Message + " \n" +
+                             "Source = " + e.Source + "\n" +
+                             "StackTrace = " + e.StackTrace + "\n" +
+                             "TargetSite = " + e.TargetSite;
+            MessageBox.Show(message);
+        }
         //Wyświetlanie informacji
         
         void item_menu_list(object sender, RoutedEventArgs e)
@@ -163,4 +171,5 @@ namespace Projekt_Groteka
         }
 
     }
+    
 }

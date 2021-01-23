@@ -24,8 +24,6 @@ D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\addcm.g.cs
 D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\addcm.baml
 D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\AddWindow.g.cs
 D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\AddWindow.baml
-D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\DeleteWindow.g.cs
-D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\DeleteWindow.baml
 S:\Projekty\Projekt_Groteka\Projekt_Groteka\bin\Debug\Projekt_Groteka.exe.config
 S:\Projekty\Projekt_Groteka\Projekt_Groteka\bin\Debug\Projekt_Groteka.exe
 S:\Projekty\Projekt_Groteka\Projekt_Groteka\bin\Debug\Projekt_Groteka.pdb
@@ -80,3 +78,5 @@ C:\Users\X250\RiderProjects\Projekt_Groteka\Projekt_Groteka\obj\Debug\Projekt_Gr
 C:\Users\X250\RiderProjects\Projekt_Groteka\Projekt_Groteka\obj\Debug\Projekt_Groteka.csproj.CopyComplete
 C:\Users\X250\RiderProjects\Projekt_Groteka\Projekt_Groteka\obj\Debug\Projekt_Groteka.exe
 C:\Users\X250\RiderProjects\Projekt_Groteka\Projekt_Groteka\obj\Debug\Projekt_Groteka.pdb
+D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\Projekt_Groteka_Content.g.cs
+D:\Projekty\Projekt_Groteka\Projekt_Groteka\obj\Debug\Projekt_Groteka.csproj.CoreCompileInputs.cache
